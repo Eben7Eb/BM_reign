@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bow Momentum, Westlea, Harare</title>
+<title>Bow Momentum — Westlea, Harare</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
 <style>
 :root{--p:#5c2d82;--pl:#7b4fa6;--pp:#f3eef9;--pd:#3a1554;--g:#d4a843;--gl:#f0cc7a;--cr:#fdfcfa;--tx:#1a1a2e;--tl:#6b6b8a;}
@@ -288,24 +288,93 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
 @media(max-width:680px){
   .nav-links{display:none;}
   .burger{display:flex;}
-  nav{padding:.85rem 1.4rem;}
-  .hero-content{padding:0 1.5rem;max-width:100%;}
+  nav{padding:1rem 1.6rem;}
+
+  /* HERO */
+  .hero{height:100vh;min-height:620px;}
+  .hero-content{padding:0 1.8rem;max-width:100%;}
   .hero-stat{display:none;}
-  .hero-brand{font-size:3.2rem;}
-  .categories,.why,.offers,.testimonials,.quiz-section{padding:3.5rem 1.4rem;}
-  .location,.deal,.scripture,.pay-strip{padding-left:1.4rem;padding-right:1.4rem;}
-  .cat-grid{grid-template-columns:1fr 1fr;}
+  .hero-brand{font-size:3.6rem;line-height:.95;margin-bottom:.8rem;}
+  .hero-tagline-shona{font-size:1rem;margin-bottom:2.5rem;}
+  .hero-btns{flex-direction:column;gap:.85rem;}
+  .btn-gold,.btn-ghost{text-align:center;padding:1.05rem 2rem;font-size:.92rem;}
+
+  /* DEAL & SCRIPTURE */
+  .deal{flex-direction:column;text-align:center;gap:1rem;padding:1.4rem 1.8rem;}
+  .scripture{padding:1.8rem 1.8rem;}
+  .sc-text{font-size:1rem;}
+
+  /* STATS */
+  .stats-row{gap:2.5rem;padding:2.5rem 1.8rem;flex-wrap:wrap;}
+  .stat-num{font-size:2.4rem;}
+
+  /* SECTIONS — generous vertical + horizontal padding */
+  .categories{padding:4rem 1.8rem;}
+  .why{padding:4rem 1.8rem;}
+  .offers{padding:4rem 1.8rem;}
+  .testimonials{padding:4rem 1.8rem;}
+  .quiz-section{padding:4rem 1.8rem;}
+  .location{padding:4rem 1.8rem;}
+  .pay-strip{flex-direction:column;text-align:center;padding:3rem 1.8rem;gap:1.8rem;}
+
+  /* SECTION HEADERS */
+  .sh{margin-bottom:2.2rem;}
+  .sh-title{font-size:2.1rem;}
+
+  /* CATEGORY GRID */
+  .cat-grid{grid-template-columns:1fr 1fr;gap:1rem;}
+  .cat-tile{border-radius:14px;}
   .cat-tile.wide{grid-column:span 2;}
-  .why-grid{grid-template-columns:1fr 1fr;}
-  .og{grid-template-columns:1fr;}
-  .t-grid{grid-template-columns:1fr;}
-  .pay-strip{flex-direction:column;text-align:center;padding:2.5rem 1.4rem;}
-  .deal{flex-direction:column;text-align:center;gap:.8rem;padding:1rem 1.4rem;}
-  footer{padding:2rem 1.4rem;flex-direction:column;text-align:center;}
-  .stats-row{gap:2rem;padding:2rem 1.4rem;}
-  body{padding-bottom:68px;}
+  .cat-name{font-size:1rem;}
+  .cat-tile.wide .cat-name{font-size:1.3rem;}
+  .cat-sub{font-size:.65rem;}
+  .cat-body{padding:.9rem;}
+
+  /* WHY GRID */
+  .why-grid{grid-template-columns:1fr 1fr;gap:1rem;}
+  .wc{padding:1.6rem 1.1rem;}
+  .wc-icon{font-size:1.8rem;}
+
+  /* OFFERS */
+  .og{grid-template-columns:1fr;gap:1rem;}
+  .oc{min-height:180px;}
+  .oc-title{font-size:1.5rem;}
+
+  /* TESTIMONIALS */
+  .t-grid{grid-template-columns:1fr;gap:1.2rem;}
+  .tc{padding:1.6rem;}
+  .tc-text{font-size:.9rem;line-height:1.8;}
+
+  /* LOCATION */
+  .location{grid-template-columns:1fr;gap:2rem;}
+  .loc-img img{height:260px;}
+  .loc-title{font-size:2rem;}
+  .loc-btns{flex-direction:column;gap:.7rem;}
+  .loc-btn-p,.loc-btn-s{text-align:center;padding:.9rem;}
+
+  /* PAYMENT CHIPS */
+  .pay-chips{justify-content:center;gap:.7rem;}
+  .ps-title{font-size:1.5rem;}
+
+  /* QUIZ */
+  .quiz-options{gap:.7rem;}
+  .quiz-opt{font-size:.82rem;padding:.65rem 1.1rem;}
+  .quiz-title{font-size:2rem;}
+
+  /* FOOTER */
+  footer{padding:2.5rem 1.8rem;flex-direction:column;text-align:center;gap:1.8rem;}
+  .f-left{flex-direction:column;align-items:center;text-align:center;gap:.6rem;}
+
+  /* MODAL */
+  .modal{padding:2rem 1.6rem;}
+
+  body{padding-bottom:72px;}
   .mob-bar{display:block;}
-  .wa-wrap{bottom:5rem;}
+  .wa-wrap{bottom:5.5rem;}
+
+  /* MOB BAR — bigger tap targets */
+  .mbb{padding:.85rem .4rem;font-size:.6rem;}
+  .mbb-icon{font-size:1.4rem;}
 }
 </style>
 </head>
@@ -356,7 +425,7 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
 <div class="deal">
   <div class="deal-l">
     <span class="deal-badge">🔥 Today</span>
-    <span class="deal-txt">Same-day delivery across Harare, <strong>Order by 2PM</strong></span>
+    <span class="deal-txt">Same-day delivery across Harare — <strong>Order by 2PM</strong></span>
   </div>
   <button class="deal-cta" onclick="openModal('Delivery Order')">Confirm Availability →</button>
 </div>
@@ -450,7 +519,7 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
       </div>
       <div class="cat-fun">
         <div class="cat-fun-emoji">🥣</div>
-        <div class="cat-fun-msg">"Start the day right, every single morning ☀️"</div>
+        <div class="cat-fun-msg">"Start the day right — every single morning ☀️"</div>
         <button class="cat-fun-btn" onclick="openModal('Breakfast & Cereals')">Get It Delivered</button>
       </div>
     </div>
@@ -495,7 +564,7 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
       </div>
       <div class="cat-fun">
         <div class="cat-fun-emoji">🧴</div>
-        <div class="cat-fun-msg">"Look after yourself, you deserve it 💜"</div>
+        <div class="cat-fun-msg">"Look after yourself — you deserve it 💜"</div>
         <button class="cat-fun-btn" onclick="openModal('Personal Care')">Get It Delivered</button>
       </div>
     </div>
@@ -510,7 +579,7 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
       </div>
       <div class="cat-fun">
         <div class="cat-fun-emoji">🏠</div>
-        <div class="cat-fun-msg">"A clean home is a happy home, we've got everything!"</div>
+        <div class="cat-fun-msg">"A clean home is a happy home — we've got everything!"</div>
         <button class="cat-fun-btn" onclick="openModal('Household')">Get It Delivered</button>
       </div>
     </div>
@@ -525,7 +594,7 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
       </div>
       <div class="cat-fun">
         <div class="cat-fun-emoji">📚</div>
-        <div class="cat-fun-msg">"Groceries AND Stationery? Yes, because we thought of everything 😎"</div>
+        <div class="cat-fun-msg">"Groceries AND stationery? Yes — because we thought of everything 😎"</div>
         <button class="cat-fun-btn" onclick="openModal('Stationery')">Confirm Availability</button>
       </div>
     </div>
@@ -568,8 +637,8 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
   </div>
   <div class="why-grid">
     <div class="wc rv d1"><div class="wc-icon">🙏</div><div class="wc-title">Faith-Driven</div><div class="wc-desc">Everything we do is rooted in God and genuine love for you.</div></div>
-    <div class="wc rv d2"><div class="wc-icon">🚚</div><div class="wc-title">Same-Day Delivery</div><div class="wc-desc">Order by 2PM, at your door before evening, across Harare.</div></div>
-    <div class="wc rv d3"><div class="wc-icon">💳</div><div class="wc-title">Pay Your Way</div><div class="wc-desc">Cash, EcoCash, Mukuru, WorldRemit, diaspora always welcome.</div></div>
+    <div class="wc rv d2"><div class="wc-icon">🚚</div><div class="wc-title">Same-Day Delivery</div><div class="wc-desc">Order by 2PM — at your door before evening, across Harare.</div></div>
+    <div class="wc rv d3"><div class="wc-icon">💳</div><div class="wc-title">Pay Your Way</div><div class="wc-desc">Cash, EcoCash, Mukuru, WorldRemit — diaspora always welcome.</div></div>
     <div class="wc rv d4"><div class="wc-icon">⭐</div><div class="wc-title">Best Service</div><div class="wc-desc">Warm, personal service every time. You are family here.</div></div>
   </div>
 </section>
@@ -717,7 +786,7 @@ footer{background:var(--tx);padding:2.8rem 4rem;display:flex;justify-content:spa
     <div id="mForm">
       <div class="modal-icon">✦</div>
       <div class="modal-title">Confirm Availability</div>
-      <div class="modal-avail">✅ Available, We Have It!</div>
+      <div class="modal-avail">✅ Available — We Have It!</div>
       <div class="modal-sub">Tell us what you need and we'll sort it right away.</div>
       <div class="modal-item" id="mItem"></div>
       <div class="mfield"><label>Your Name</label><input type="text" id="mName" placeholder="e.g. Tendai Moyo"></div>
@@ -744,7 +813,7 @@ const sc=[
   {t:'"The Lord will make you the head, not the tail."',r:'— Deuteronomy 28:13'},
   {t:'"Commit to the Lord whatever you do, and He will establish your plans."',r:'— Proverbs 16:3'},
   {t:'"I can do all things through Christ who strengthens me."',r:'— Philippians 4:13'},
-  {t:'"Give, and it will be given to you, pressed down, shaken together and running over."',r:'— Luke 6:38'},
+  {t:'"Give, and it will be given to you — pressed down, shaken together and running over."',r:'— Luke 6:38'},
 ];
 let si=0;const st=document.getElementById('scText'),sr=document.getElementById('scRef');
 st.textContent=sc[0].t;sr.textContent=sc[0].r;
@@ -767,7 +836,7 @@ document.querySelectorAll('.rv').forEach(r=>ro.observe(r));
 // WHATSAPP BUBBLE MESSAGES
 const waMsgs=[
   "🛒 Need groceries? We've got you!",
-  "🚚 Order by 2PM, delivered today!",
+  "🚚 Order by 2PM — delivered today!",
   "💜 Ukama igasva hunozadziswa nekudya",
   "👋 Hi! Tap to order on WhatsApp",
   "🔥 Same-day delivery in Harare!",
@@ -787,15 +856,15 @@ setTimeout(()=>{cycleBubble();setInterval(cycleBubble,6000);},2500);
 
 // WHAT'S COOKING QUIZ
 const results={
-  sadza:{emoji:'🍚',title:'Sadza Night, Classic!',desc:'Mealie meal, cooking oil, Royco for flavour, and salt. Simple, filling, and home. We have everything you need.',item:'Sadza Night Essentials'},
-  quick:{emoji:'⚡',title:'Quick & Easy!',desc:'Noodles - Kellogg\'s or Indomie, ready in minutes. Add an egg and a little Royco and you\'re sorted!',item:'Quick Meal Essentials'},
-  snack:{emoji:'🍿',title:'Snack Mode: Activated 😄',desc:'Lays, Doritos, Things, Sweets, biscuits, the full lineup is here. Your movie night just got a serious upgrade.',item:'Snacks'},
-  brekkie:{emoji:'☀️',title:'Big Breakfast!',desc:'Cerevita, Oatmeal, eggs, yogurt, bread, the works. A proper start to the day.',item:'Breakfast Essentials'},
-  special:{emoji:'🎉',title:'Let\'s Make It Special!',desc:'Salad dressings, condiments, the good drinks, we\'ll help you put together a spread worth remembering. Call us!',item:'Special Occasion Order'},
-  salad:{emoji:'🥗',title:'Fresh Salad Vibes!',desc:'Grab your salad dressings, mayo, and a dash of Spices to season. Light, fresh, and sorted from Bow Momentum!',item:'Salad & Condiments'},
-  spice:{emoji:'🌶️',title:'Let\'s Turn Up the Heat!',desc:'Royco, salt, pepper, spices, tangy mayo, we\'ve got every condiment to make your food sing. No bland meals allowed!',item:'Spices & Condiments'},
-  baking:{emoji:'🍞',title:'Baker Mode Activated!',desc:'Sugar, salt, eggs, margarine, the baking basics are all here. Come in or call and we\'ll have it ready for you.',item:'Baking Essentials'},
-  nothing:{emoji:'😂',title:'We\'ve All Been There!',desc:'You open the fridge, stare for 10 seconds, close it. Open it again. Still nothing. That\'s what we\'re here for, order NOW!',item:'Emergency Restock'},
+  sadza:{emoji:'🍚',title:'Sadza Night — Classic!',desc:'Mealie meal, cooking oil, Royco for flavour, and salt. Simple, filling, and home. We have everything you need.',item:'Sadza Night Essentials'},
+  quick:{emoji:'⚡',title:'Quick & Easy!',desc:'Noodles — Kellogg\'s or Indomie, ready in minutes. Add an egg and a little Royco and you\'re sorted!',item:'Quick Meal Essentials'},
+  snack:{emoji:'🍿',title:'Snack Mode: Activated 😄',desc:'Chips, Things, biscuits — the full lineup is here. Your movie night just got a serious upgrade.',item:'Snacks'},
+  brekkie:{emoji:'☀️',title:'Big Breakfast!',desc:'Cerevita, eggs, yogurt, bread — the works. A proper start to the day.',item:'Breakfast Essentials'},
+  special:{emoji:'🎉',title:'Let\'s Make It Special!',desc:'Salad dressings, condiments, the good drinks — we\'ll help you put together a spread worth remembering. Call us!',item:'Special Occasion Order'},
+  salad:{emoji:'🥗',title:'Fresh Salad Vibes!',desc:'Grab your salad dressings, mayo, and a dash of Royco to season. Light, fresh, and sorted from Bow Momentum!',item:'Salad & Condiments'},
+  spice:{emoji:'🌶️',title:'Let\'s Turn Up the Heat!',desc:'Royco, salt, pepper, spices, tangy mayo — we\'ve got every condiment to make your food sing. No bland meals allowed!',item:'Spices & Condiments'},
+  baking:{emoji:'🍞',title:'Baker Mode — Activated!',desc:'Sugar, salt, cooking oil — the baking basics are all here. Come in or call and we\'ll have it ready for you.',item:'Baking Essentials'},
+  nothing:{emoji:'😂',title:'We\'ve All Been There!',desc:'You open the fridge, stare for 10 seconds, close it. Open it again. Still nothing. That\'s what we\'re here for — order NOW!',item:'Emergency Restock'},
 };
 function showResult(key){
   document.querySelectorAll('.quiz-opt').forEach(b=>b.classList.remove('sel'));
@@ -833,7 +902,7 @@ function submitForm(){
   const msg=document.getElementById('mMsg').value.trim();
   if(!name||!phone){alert('Please add your name and phone number so we can reach you!');return;}
   const waMsg=encodeURIComponent(
-    '🛒 *New Availability Request, Bow Momentum*\n\n'+
+    '🛒 *New Availability Request — Bow Momentum*\n\n'+
     '👤 Name: '+name+'\n📞 Phone: '+phone+'\n'+item+
     (msg?'\n💬 '+msg:'')+'\n\nPlease confirm and contact the customer!'
   );
